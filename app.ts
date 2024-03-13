@@ -1,32 +1,72 @@
-// Funciones Básicas
-function sumar( a: number, b: number ): number {
-  return a + b;
+
+// Objetos
+type Movile = {
+  carroceria: string;
+  modelo: string;
+  antibalas: boolean;
+  pasajeros: number;
+  disparar?: () => void;
 }
 
-const contar = ( heroes:string[] ): number => {
-  return heroes.length;
-}
-const superHeroes: string[] = ["Flash", "Arrow", "Superman", "Linterna Verde"];
-contar(superHeroes);
+const batimovil: Movile = {
+  carroceria: "Negra",
+  modelo: "6x6",
+  antibalas: true,
+  pasajeros:4
+};
 
-//Parametros por defecto
-const llamarBatman = ( llamar: boolean = true ): void => {
-  if( llamar ){
-    console.log("Batiseñal activada");
+const bumblebee: Movile = {
+  carroceria: "Amarillo con negro",
+  modelo: "4x2",
+  antibalas: true,
+  pasajeros:4,
+  disparar(){ // El metodo disparar es opcional
+    console.log("Disparando");
   }
+};
+
+
+// Villanos debe de ser un arreglo de objetos personalizados
+type Villans = {
+  nombre: string;
+  edad?: number;
+  mutante: boolean;
+}
+const villanos: Villans[] = [{
+  nombre:"Lex Luthor",
+  edad: 54,
+  mutante:false
+},{
+  nombre: "Erik Magnus Lehnsherr",
+  edad: 49,
+  mutante: true
+},{
+  nombre: "James Logan",
+  edad: undefined,
+  mutante: true
+}];
+
+// Multiples tipos
+// cree dos tipos, uno para charles y otro para apocalipsis
+type Charles = {
+  poder: string;
+  estatura: number;
+}
+const charles: Charles = {
+  poder:"psiquico",
+  estatura: 1.78
+};
+type Apocalipsis = {
+  lider: boolean;
+  miembros: string[];
+}
+const apocalipsis: Apocalipsis = {
+  lider:true,
+  miembros: ["Magneto","Tormenta","Psylocke","Angel"]
 }
 
-llamarBatman();
+// Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
+let mystique: Charles|Apocalipsis;
 
-// Rest?
-const unirheroes = ( ...personas: string[]): string => {
-  return personas.join(", ");
-}
-
-
-// Tipo funcion
-const noHaceNada = ( numero: number, texto:string , booleano: boolean, arreglo: string[] ): void => {}
-
-// Crear el tipo de funcion que acepte la funcion "noHaceNada"
-let noHaceNadaTampoco: (n: number, s: string, b: boolean, a: string[]) => void;
-noHaceNadaTampoco = noHaceNada
+mystique = charles;
+mystique = apocalipsis;
