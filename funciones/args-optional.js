@@ -8,3 +8,4 @@
     const name = fullName("Gustavo");
     console.log({ name });
 })();
+//# sourceMappingURL=args-optional.js.map

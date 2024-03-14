@@ -13,3 +13,4 @@
     avenvers = Number("55A");
     console.log({ avenvers });
 })();
+//# sourceMappingURL=numbers.js.map

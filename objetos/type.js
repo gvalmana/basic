@@ -15,3 +15,4 @@
     };
     console.log(superman.getName);
 })();
+//# sourceMappingURL=type.js.map

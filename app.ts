@@ -64,7 +64,6 @@ const apocalipsis: Apocalipsis = {
   lider:true,
   miembros: ["Magneto","Tormenta","Psylocke","Angel"]
 }
-
 // Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
 let mystique: Charles|Apocalipsis;
 

@@ -6,3 +6,4 @@
     isSuperman = (isBatman) ? true : false;
     console.log({ isSuperman });
 })();
+//# sourceMappingURL=boolean.js.map

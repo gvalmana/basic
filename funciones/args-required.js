@@ -10,3 +10,4 @@
     const name = fullName("Gustavo", "Valmaña");
     console.log({ name });
 })();
+//# sourceMappingURL=args-required.js.map
