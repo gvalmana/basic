@@ -108,5 +108,8 @@
   },
   "exclude": [
     "node_modules"
+  ],
+  "include": [
+    "interfaces"
   ]
 }

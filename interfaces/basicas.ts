@@ -1,5 +1,5 @@
-(()=>{
-    type Hero = {
+(() => {
+    interface Hero {
         name: string;
         age?:number;
         powers: string[];
@@ -20,4 +20,4 @@
             return this.name;
         }
     }
-})()
+})();
